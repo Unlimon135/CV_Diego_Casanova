@@ -1,0 +1,54 @@
+/* styles.css */
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    height: 100vh;
+  }
+  
+  .sidebar {
+    background-color: #2c2c2c;
+    color: white;
+    width: 30%;
+    padding: 2rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  
+  .main-content {
+    flex: 1;
+    padding: 2rem;
+    background-color: #f7f7f7;
+    overflow-y: auto;
+  }
+  
+  h1 {
+    margin-top: 0;
+    font-size: 2rem;
+  }
+  
+  section {
+    margin-bottom: 2rem;
+  }
+  
+  .profile-pic {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background-color: #ccc;
+    margin-bottom: 1rem;
+  }
+  
+  ul {
+    padding-left: 1.2rem;
+  }
+  
+  .subtitle {
+    font-weight: bold;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+  }
+  
