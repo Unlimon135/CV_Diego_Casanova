@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Operaciones con 2 Números</title>
+  <script>
+    // Espera a que el documento esté completamente cargado
+    window.onload = function() {
+      // Solicita al usuario que ingrese el primer número
+      let num1 = parseFloat(prompt("Ingresa el primer número:"));
+
+      // Solicita al usuario que ingrese el segundo número
+      let num2 = parseFloat(prompt("Ingresa el segundo número:"));
+
+      // Verifica que ambos valores sean números válidos
+      if (isNaN(num1) || isNaN(num2)) {
+        alert("Por favor, ingresa solo números válidos.");
+        return; // Termina el programa si hay datos inválidos
+      }
+
+      // Inicia el bucle de 5 iteraciones
+      for (let i = 1; i <= 5; i++) {
+        let resultado = 0; // Variable para almacenar el resultado
+        let mensaje = "";  // Variable para el texto del alert
+
+        switch (i) {
+          case 1:
+            resultado = num1 + num2;
+            mensaje = `Iteración ${i}: Suma = ${resultado}`;
+            break;
+          case 2:
+            resultado = num1 - num2;
+            mensaje = `Iteración ${i}: Resta = ${resultado}`;
+            break;
+          case 3:
+            resultado = num1 * num2;
+            mensaje = `Iteración ${i}: Multiplicación = ${resultado}`;
+            break;
+          case 4:
+            // Verifica que no se divida para cero
+            if (num2 === 0) {
+              mensaje = `Iteración ${i}: No se puede dividir entre 0.`;
+            } else {
+              resultado = num1 / num2;
+              mensaje = `Iteración ${i}: División = ${resultado}`;
+            }
+            break;
+          case 5:
+            // Verifica que no se saque módulo con 0
+            if (num2 === 0) {
+              mensaje = `Iteración ${i}: No se puede hacer módulo con 0.`;
+            } else {
+              resultado = num1 % num2;
+              mensaje = `Iteración ${i}: Módulo = ${resultado}`;
+            }
+            break;
+        }
+
+        // Muestra el resultado en una alerta
+        alert(mensaje);
+      }
+    };
+  </script>
+</head>
+<body>
+</body>
+</html>
